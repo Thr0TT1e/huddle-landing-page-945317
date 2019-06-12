@@ -37,18 +37,20 @@ table
 	border-collapse: collapse
 	border-spacing: 0
 
-.grid-items
-	border: 1px solid black
+//.grid-items
+//	border: 1px solid black
 
 body
 	max-width: 1440px
 	width: 100%
 	margin: auto
 	font-size: 18px
+	font-family: $font-body
 
 h1, h2, h3, h4, h5, h6
 	font-family: $font-heading
 	font-weight: 600
+	color: $color-neutral-dark
 
 .main-container
 	display: grid
@@ -58,33 +60,94 @@ h1, h2, h3, h4, h5, h6
 
 header
 	display: grid
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: 513px 1fr
+	grid-column-gap: 70px
 	grid-auto-rows: auto
 	background: url("../img/bg-hero-desktop.svg") $color-neutral-pale
+	padding: 40px 80px 60px 78px
 	.logo
 		margin-bottom: 40px
 		width: 198px
+		padding-top: 10px
 	.btn-header
 		text-align: right
+		font-size: 14px
 		button
 			height: 48px
 			width: 200px
 			background: white
+			font-weight: bold
 			border-radius: 50px
 			border: none
+			color: $color-neutral-dark
+			padding-right: 1px
 	.header-text
 		display: grid
 		grid-template-columns: 1fr
-		grid-template-rows: repeat(3, auto)
+		grid-template-rows: 149px 113px auto
+		margin-top: 123px
 		h1
-			font-size: 28pt
+			font-size: 40px
+			line-height: 150%
 		p
-
+			color: $color-neutral-dark
+			line-height: 1.5em
+		.btn-get
+			width: 280px
+			height: 56px
+			border-radius: 40px
+			border: none
+			background-color: $color-primary
+			color: $color-neutral-pale
+			font-size: 15px
+	.header-img
+		margin-top: 30px
 	img
 		width: 100%
 		height: auto
 
-
+.content
+	display: grid
+	grid-template-columns: auto
+	grid-row-gap: 38px
+	margin: 130px 105px 160px 100px
+	.border-sec
+		border: 1px solid red
+		border-radius: 15px
+	.content-item1
+		display: grid
+		grid-template-columns: 485px 411px
+		grid-template-rows: 435px
+		grid-column-gap: 190px
+		padding-left: 120px
+		.sec-item1
+			margin-top: 160px
+			align-content: start
+			h2
+				margin-bottom: 20px
+				font-size: 1.6em
+			p
+				line-height: 1.5
+		img
+			margin: 52px 0 52px 0
+			width: 100%
+			height: auto
+	.content-item2
+		display: grid
+		grid-template-columns: 480px 411px
+		grid-template-rows: 445px
+		grid-column-gap: 190px
+		img
+			width: 100%
+			height: auto
+	.content-item3
+		display: grid
+		grid-template-columns: 480px 411px
+		grid-template-rows: 435px
+		grid-column-gap: 190px
+		img
+			width: 100%
+			height: auto
 
 
 
