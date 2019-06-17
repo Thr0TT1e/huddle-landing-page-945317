@@ -60,14 +60,15 @@ h1, h2, h3, h4, h5, h6
 
 header
 	display: grid
-	grid-template-columns: 513px 1fr
+	grid-template-columns: repeat(2, 1fr)
 	grid-column-gap: 70px
 	grid-auto-rows: auto
-	background: url("../img/bg-hero-desktop.svg") $color-neutral-pale
+	background: url("../img/bg-hero-desktop.svg") $color-neutral-pale no-repeat top center
 	padding: 40px 80px 60px 78px
 	.logo
 		margin-bottom: 40px
-		width: 198px
+		max-width: 198px
+		height: auto
 		padding-top: 10px
 	.btn-header
 		text-align: right
@@ -85,7 +86,8 @@ header
 		display: grid
 		grid-template-columns: 1fr
 		grid-template-rows: 149px 113px auto
-		margin-top: 123px
+		//margin-top: 123px
+		margin-top: 10vh
 		h1
 			font-size: 40px
 			line-height: 150%
@@ -93,8 +95,8 @@ header
 			color: $color-neutral-dark
 			line-height: 1.5em
 		.btn-get
-			width: 280px
-			height: 56px
+			width: 17vw
+			height: 10vh
 			border-radius: 40px
 			border: none
 			background-color: $color-primary
@@ -102,15 +104,15 @@ header
 			font-size: 15px
 	.header-img
 		margin-top: 30px
-		img
-			width: 100%
-			height: auto
+	img
+		width: 100%
+		height: auto
 
 .content
 	display: grid
 	grid-template-columns: auto
 	grid-row-gap: 38px
-	margin: 130px 105px 160px 100px
+	margin: 130px 105px 60px 100px
 	.border-sec
 		border: none
 		border-radius: 15px
@@ -122,46 +124,47 @@ header
 			line-height: 1.5
 	.content-item1
 		display: grid
-		grid-template-columns: 485px 411px
-		grid-template-rows: 435px
-		grid-column-gap: 190px
-		padding-left: 120px
+		grid-template-columns: minmax(auto, 485px) minmax(auto, 411px)
+		grid-template-rows: auto
+		grid-column-gap: 10%
+		padding: 60px 30px 60px 125px
 		.sec-item1
-			margin-top: 160px
-			align-content: start
+			display: grid
+			grid-template-columns: auto
+			align-self: center
 		img
-			margin: 52px 0 52px 0
 			width: 100%
 			height: auto
 	.content-item2
 		display: grid
-		grid-template-columns: 415px 500px
-		grid-template-rows: 370px
-		grid-column-gap: 168px
-		padding: 80px 0 0 125px
+		grid-template-columns: minmax(auto, 415px) minmax(auto, 500px)
+		grid-template-rows: auto
+		grid-column-gap: 15%
+		padding: 60px 30px 60px 125px
 		img
 			width: 100%
 			height: auto
 		.sec-item2
-			margin-top: 90px
+			align-self: center
 	.content-item3
 		display: grid
-		grid-template-columns: 480px 420px
-		grid-template-rows: 380px
-		grid-column-gap: 186px
-		padding: 62px 0 0 124px
+		grid-template-columns: minmax(auto, 480px) minmax(auto, 420px)
+		grid-template-rows: auto
+		grid-column-gap: 15%
+		padding: 60px 30px 60px 124px
 		.sec-item3
-			margin-top: 100px
+			align-self: center
 		img
 			width: 100%
 			height: auto
 .etc-block
-	width: 800px
+	width: 47%
 	height: 280px
 	border: 1px solid #000000
 	border-radius: 20px
 	position: relative
-	margin-left: 320px
+	top: 7vh
+	margin: 0 auto
 	text-align: center
 
 .footer
