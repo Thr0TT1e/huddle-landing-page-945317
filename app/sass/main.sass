@@ -110,6 +110,7 @@ header
 			border: none
 			background-color: $color-primary
 			color: $color-neutral-pale
+			font-weight: bold
 			font-size: 15px
 			transition: all 600ms ease
 			&:hover
@@ -126,7 +127,7 @@ header
 	display: grid
 	grid-template-columns: auto
 	grid-row-gap: 38px
-	margin: 130px 105px 60px 100px
+	margin: 130px 105px 160px 100px
 	.border-sec
 		border: none
 		border-radius: 15px
@@ -178,6 +179,7 @@ header
 		img
 			width: 100%
 			height: auto
+
 .etc-block
 	display: grid
 	grid-template-columns: auto
@@ -187,18 +189,66 @@ header
 	border: none
 	border-radius: 20px
 	position: relative
-	top: -17vh
+	top: -15vh
 	margin: 0 auto
 	text-align: center
+	box-shadow: 2px 2px 10px $color-neutral-pale, -2px -2px 10px $color-neutral-pale
+	align-content: space-evenly
+	&:hover
+		box-shadow: 0 6px 6px darken($color-neutral-pale, 5%), 0 -6px 6px darken($color-neutral-pale, 5%), 6px 0 6px darken($color-neutral-pale, 5%), -6px 0 6px darken($color-neutral-pale, 5%)
+		transition: all .4s ease
+	h1
+		font-size: 23px
+	button
+		width: 400px
+		height: 80px
+		justify-self: center
+		background: $color-primary
+		border-radius: 40px
+		border: none
+		color: $color-neutral-pale
+		font-weight: bold
+		&:hover
+			background: white
+			border: 1px solid $color-primary
+			color: $color-primary
+			transition: background .4s ease
 
-.backgraund-footer
+.background-footer
 	background: $color-neutral-dark
 
 .footer
-	color: white
-
-
-
+	color: $color-neutral-pale
+	a
+		color: $color-neutral-pale
+	.footer-item1
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: auto
+		.logo-footer
+			grid-column: 1 / 4
+			margin-bottom: 30px
+		ul
+			display: flex
+			margin-bottom: 30px
+			li
+				padding-right: 20px
+		.location
+			line-height: 1.5
+		.menu-footer
+			display: flex
+			justify-content: space-evenly
+			ul
+				flex-direction: column
+				li
+					padding-bottom: 22pt
+		.social-icon
+			justify-self: center
+			svg
+				width: 30px
+		.copyright
+			grid-column: 1 / 4
+			justify-self: end
 
 .attribution
 	font-size: 11px
